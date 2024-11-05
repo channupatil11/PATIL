@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAISHNAVI TILES PRINT</title>
+    <style>
+        /* Your CSS code from previous setup */
+          /* Main Styles */
+          html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Modern No 20, sans-serif;
+            background-color: #EEEEEE;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #222831;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            color: #00ADB5;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #393E46;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav a {
+            color: #EEEEEE;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .nav a:hover {
+            color: #00ADB5;
+            transform: scale(1.1);
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+        .search-container input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #00ADB5;
+            border-radius: 4px;
+            background-color: #EEEEEE;
+            color: #222831;
+        }
+        .search-container button {
+            padding: 8px 16px;
+            background-color: #00ADB5;
+            color: #EEEEEE;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .search-container button:hover {
+            background-color: #008B94;
+        }
+        main {
+            padding: 40px;
+            flex: 1;
+        }
+        h2 {
+            text-align: center;
+            color: #222831;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .product {
+            width: 24%;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: slideUp 0.8s forwards;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+            background-color: #EEEEEE;
+        }
+        .product img:hover {
+            transform: scale(1.05);
+        }
+        .product-description {
+            margin-top: 10px;
+            background-color: #393E46;
+            color: #EEEEEE;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .product-price {
+            font-weight: bold;
+            color: #00ADB5;
+        }
+        footer {
+            background-color: #222831;
+            padding: 40px 0;
+            text-align: center;
+            color: #EEEEEE;
+        }
+        footer .social-icons a {
+            margin: 0 10px;
+            color: #EEEEEE;
+            font-size: 24px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        footer .social-icons a:hover {
+            color: #00ADB5;
+            transform: scale(1.2);
+        }
+
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            .product {
+                width: 32%;
+            }
+        }
+        @media (max-width: 900px) {
+            .product {
+                width: 48%;
+            }
+            .nav {
+                flex-direction: column;
+            }
+            .search-container {
+                margin-top: 10px;
+            }
+        }
+        @media (max-width: 600px) {
+            .product {
+                width: 100%;
+            }
+            .search-container input[type="text"], .search-container button {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+      button {
+    padding: 12px 24px;
+    background-color: #00ADB5;
+    color: #EEEEEE;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #008B94;
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 139, 148, 0.3);
+}
+
+button:active {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(0, 139, 148, 0.2);
+}
+
+        /* (omitted for brevity, paste your styles here) */
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <h1>VAISHNAVI TILES PRINT</h1>
+    </header>
+    <nav class="nav">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="tel:9986291937">Call Us</a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search products..." id="searchInput">
+            <button onclick="searchProduct()">Search</button>
+        </div>
+    </nav>
+    <main class="content">
+        <h2>Our Products</h2>
+        <div class="product-container">
+            <div class="product" data-product-name="BAL KRISHNA">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqKFZnzy9JkCPjpTdNSldRt11UyopvmkeutQ-aXBo8PEmhI5VUxTZYes3gwMKzyG_KoefnWbjPr2m881Zvx89Ox6Xxs00SvrGcn49ZyqhKqUEwR-siIPHLJ4NIKu5EpU95yFp60rEas-GzYUeZz0lzFrEKMjpGarKLwyWDgC4Dps-t81AR-T5trqphgLVX/s320/green%20laxmi%20with%20elephant%20%2024x24.jpg" alt="BAL KRISHNA">
+                <div class="product-description">
+                    <h3>BAL KRISHNA</h3>
+                    <select class="size-select" onchange="updatePrice(this)">
+                        <option value="8x12" data-price="80">8x12</option>
+                        <option value="12x18" data-price="100">12x18</option>
+                        <option value="18x24" data-price="120">18x24</option>
+                        <option value="24x24" data-price="150">24x24</option>
+                        <option value="24x36" data-price="200">24x36</option>
+                        <option value="24x48" data-price="250">24x48</option>
+                    </select>
+                    <input type="number" min="1" placeholder="Quantity" class="quantity-input">
+                    <p class="product-price">Price: RS.<span class="price-value">100</span></p>
+                    <button onclick="buyNow(this)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>Contact us at: vaishnavitilesprint@gmail.com</p>
+        <p>&copy; 2024 VAISHNAVI TILES PRINT. All Rights Reserved.</p>
+    </footer>
+    <script>
+  function updatePrice(selectElement) {
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
+    const price = selectedOption.getAttribute('data-price');
+    const priceDisplay = selectElement.closest('.product-description').querySelector('.price-value');
+
+    priceDisplay.textContent = price;
+}
+
+function buyNow(button) {
+    const productElement = button.closest('.product');
+    const productName = productElement.querySelector('h3').textContent;
+    const selectedSize = productElement.querySelector('.size-select').value;
+    const quantity = parseInt(productElement.querySelector('.quantity-input').value, 10);
+    const price = productElement.querySelector('.price-value').textContent;
+
+    if (!quantity || quantity < 1) {
+        alert("Please select a valid quantity.");
+        return;
+    }
+
+    const whatsappMessage = `Hello, I would like to purchase ${quantity} unit(s) of ${productName} in size ${selectedSize} at RS.${price} each.`;
+    const whatsappURL = `https://wa.me/9986291937?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappURL, '_blank');
+}
+
+        function searchProduct() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                const productName = product.dataset.productName.toLowerCase();
+                if (productName.includes(input)) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
